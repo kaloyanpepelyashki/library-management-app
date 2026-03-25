@@ -72,3 +72,7 @@ C:\Users\kaloy\Desktop\projects\university\AOP\bonus-point-assignment\library-ma
 C:\Users\kaloy\Desktop\projects\university\AOP\bonus-point-assignment\library-managment-app\LibraryManagementApp\obj\Debug\net9.0\LibraryManagementApp.pdb
 C:\Users\kaloy\Desktop\projects\university\AOP\bonus-point-assignment\library-managment-app\LibraryManagementApp\obj\Debug\net9.0\LibraryManagementApp.genruntimeconfig.cache
 C:\Users\kaloy\Desktop\projects\university\AOP\bonus-point-assignment\library-managment-app\LibraryManagementApp\obj\Debug\net9.0\ref\LibraryManagementApp.dll
+C:\Users\kaloy\Desktop\projects\university\AOP\bonus-point-assignment\library-managment-app\LibraryManagementApp\obj\Debug\net9.0\LibraryManagementApp.sourcelink.json
+C:\Users\kaloy\Desktop\projects\university\AOP\bonus-point-assignment\library-managment-app\LibraryManagementApp\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\kaloy\Desktop\projects\university\AOP\bonus-point-assignment\library-managment-app\LibraryManagementApp\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kaloy\Desktop\projects\university\AOP\bonus-point-assignment\library-managment-app\LibraryManagementApp\bin\Debug\net9.0\var\user.information.json

@@ -1,4 +1,4 @@
-﻿namespace LibraryManagementApp.Application.Interfaces;
+﻿namespace LibraryManagementApp.ApplicationLogic.Interfaces;
 
 public interface IBorrower
 {

@@ -1,1 +1,21 @@
-﻿
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:LibraryManagementApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:PopUpLoginViewModel"
+             x:Class="LibraryManagementApp.Views.PopUpSignInContent">
+    
+    
+    <StackPanel>
+        <TextBlock>Name: </TextBlock>
+        <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock>Password: </TextBlock>
+        <TextBox Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"/>
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button Command="{Binding OnSignInCommand}" Content="Sign in"/>
+            <Button Command="{Binding SetIsSignUpCommand}" Content="Sign Up" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

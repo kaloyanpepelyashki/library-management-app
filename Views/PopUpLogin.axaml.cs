@@ -1,14 +1,18 @@
-﻿$HEADER$using Avalonia;
+﻿using System;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using LibraryManagementApp.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace $NAMESPACE$
+namespace LibraryManagementApp.Views;
+
+public partial class PopUpLogin : Window
 {
-    public partial class $CLASS$ : Window
+    public PopUpLogin()
     {
-        public $CLASS$()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        DataContext = App.Services.GetRequiredService<PopUpLoginViewModel>();
     }
+    
 }

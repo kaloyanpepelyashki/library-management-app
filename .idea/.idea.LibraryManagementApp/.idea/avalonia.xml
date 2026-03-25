@@ -4,6 +4,9 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Views/MainWindow.axaml" value="LibraryManagementApp.csproj" />
+        <entry key="Views/PopUpLogin.axaml" value="LibraryManagementApp.csproj" />
+        <entry key="Views/PopUpSignInContent.axaml" value="LibraryManagementApp.csproj" />
+        <entry key="Views/PopUpSignUpContent.axaml" value="LibraryManagementApp.csproj" />
       </map>
     </option>
   </component>

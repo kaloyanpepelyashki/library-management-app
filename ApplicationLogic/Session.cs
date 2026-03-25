@@ -1,6 +1,6 @@
 ﻿using LibraryManagementApp.Models;
 
-namespace LibraryManagementApp.Application;
+namespace LibraryManagementApp.ApplicationLogic;
 
 public static class Session
 {

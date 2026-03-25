@@ -1,14 +1,15 @@
-﻿$HEADER$using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using LibraryManagementApp.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace $NAMESPACE$
+namespace LibraryManagementApp.Views;
+
+public partial class PopUpSignInContent : UserControl
 {
-    public partial class $CLASS$ : UserControl
+    public PopUpSignInContent()
     {
-        public $CLASS$()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }
