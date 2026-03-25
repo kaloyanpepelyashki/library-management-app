@@ -1,75 +1,86 @@
 ﻿using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Text.Json;
-    using LibraryManagementApp.Infrastructure;
-    using LibraryManagementApp.Infrastructure.Models;
-    using LibraryManagementApp.Models;
-    
-    namespace LibraryManagementApp.ApplicationLogic;
-    
-    public class LoanTrackingService : ILoanTrackingService
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
+using LibraryManagementApp.Infrastructure;
+using LibraryManagementApp.Models;
+
+namespace LibraryManagementApp.ApplicationLogic;
+
+public class LoanTrackingService : ILoanTrackingService
+{
+    private readonly string _booksStorageFilePath;
+    private List<Book> _booksData;
+
+    public LoanTrackingService()
     {
-        private readonly string _borrowedBooksFilePath;
-        private List<BorrowedBooksData> _borrowedBooksData;
-    
-        public LoanTrackingService()
+        _booksStorageFilePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\var\book.storage.json"));
+        _booksData = LoadBooksData();
+    }
+
+    private List<Book> LoadBooksData()
+    {
+        try
         {
-            _borrowedBooksFilePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\var\borrowedbooks.json"));
-            _borrowedBooksData = LoadBorrowedBooksData();
+            var fileContent = FileOperator.ReadFile(_booksStorageFilePath);
+            var data = JsonSerializer.Deserialize<List<Book>>(fileContent);
+            return data ?? new List<Book>();
         }
-    
-        private List<BorrowedBooksData> LoadBorrowedBooksData()
+        catch (Exception e)
         {
-            try
-            {
-                var fileContent = FileOperator.ReadFile(_borrowedBooksFilePath);
-                var data = JsonSerializer.Deserialize<List<BorrowedBooksData>>(fileContent);
-                return data ?? new List<BorrowedBooksData>();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Error loading borrowed books data: {e.Message}");
-                return new List<BorrowedBooksData>();
-            }
-        }
-    
-        public List<int> GetUserBorrowedBooks(int userId)
-        {
-            var borrowedBooks = _borrowedBooksData.FirstOrDefault(b => b.UserId == userId);
-    
-            if (borrowedBooks == null)
-                throw new ArgumentException($"Member with ID {userId} not found");
-    
-            return borrowedBooks.BorrowedBookIds ?? new List<int>();
-        }
-    
-        public List<Member> GetAllMembersWithBorrowedBooks()
-        {
-            return _borrowedBooksData
-                .Where(b => b.BorrowedBookIds != null && b.BorrowedBookIds.Count > 0)
-                .Select(b => new Member(b.UserId, string.Empty, "Member") { CurrentlyBorrowedBooks = b.BorrowedBookIds })
-                .ToList();
-        }
-    
-        public bool UserHasBorrowedBook(int userId, int bookId)
-        {
-            var borrowedBooks = _borrowedBooksData.FirstOrDefault(b => b.UserId == userId);
-    
-            if (borrowedBooks == null)
-                return false;
-    
-            return borrowedBooks.BorrowedBookIds?.Contains(bookId) ?? false;
-        }
-    
-        public int GetUserBorrowedBooksCount(int userId)
-        {
-            var borrowedBooks = _borrowedBooksData.FirstOrDefault(b => b.UserId == userId);
-    
-            if (borrowedBooks == null)
-                throw new ArgumentException($"Member with ID {userId} not found");
-    
-            return borrowedBooks.BorrowedBookIds?.Count ?? 0;
+            Console.WriteLine($"Error loading books data: {e.Message}");
+            return new List<Book>();
         }
     }
+
+    public List<int> GetUserBorrowedBooks(int userId)
+    {
+        // Get all books that are marked as borrowed
+        var borrowedBookIds = _booksData
+            .Where(b => b.IsBorrowed)
+            .Select(b => b.Id)
+            .ToList();
+
+        if (borrowedBookIds.Count == 0)
+            throw new ArgumentException($"No borrowed books found");
+
+        return borrowedBookIds;
+    }
+
+    public List<Member> GetAllMembersWithBorrowedBooks()
+    {
+        // Since we don't have user-specific borrowing data in book.storage.json,
+        // we create a member with all borrowed books
+        var borrowedBooks = _booksData
+            .Where(b => b.IsBorrowed)
+            .Select(b => b.Id)
+            .ToList();
+
+        if (borrowedBooks.Count == 0)
+            return new List<Member>();
+
+        var member = new Member(1, "All Members", "Member") 
+        { 
+            CurrentlyBorrowedBooks = borrowedBooks 
+        };
+
+        return new List<Member> { member };
+    }
+
+    public bool UserHasBorrowedBook(int userId, int bookId)
+    {
+        var book = _booksData.FirstOrDefault(b => b.Id == bookId);
+
+        if (book == null)
+            return false;
+
+        return book.IsBorrowed;
+    }
+
+    public int GetUserBorrowedBooksCount(int userId)
+    {
+        return _booksData.Count(b => b.IsBorrowed);
+    }
+}
+
