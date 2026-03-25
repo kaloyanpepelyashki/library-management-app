@@ -1,0 +1,22 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:LibraryManagementApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:PopUpLoginViewModel"
+             x:Class="LibraryManagementApp.Views.PopUpSignUpContent">
+    
+    <StackPanel>
+        <TextBlock>Tell us your Name</TextBlock>
+        <TextBox Text="{Binding Username}" />
+        <TextBlock>Choose a Password</TextBlock>
+        <TextBox Text="{Binding Password}" />
+        <StackPanel Orientation="Vertical" Spacing="5">
+            <RadioButton IsChecked="{Binding IsNotLibrarian, Mode=TwoWay}" GroupName="MemberRole" Content="General User"  />
+            <RadioButton IsChecked="{Binding IsLibrarian, Mode=TwoWay}" GroupName="MemberRole" Content="Librarian" />
+        </StackPanel>
+        <Button Command="{Binding OnSignUpCommand}" Content="Sign Up"/>
+        <Button Command="{Binding SetIsSignInCommand}" Content="Sign In" />
+    </StackPanel>
+</UserControl>

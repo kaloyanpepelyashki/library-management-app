@@ -2,11 +2,12 @@
 
 namespace LibraryManagementApp.Models;
 
-public abstract class GeneralUser
+public class GeneralUser
 {
     public int Id { get; set; }
     public string Name { get; set; }
     public Role AssignedRole { get; set; }
+    public int BorrowLimit { get; set; }
 
     public GeneralUser(int id, string name, string role)
     {

@@ -10,6 +10,11 @@
     <ItemGroup>
         <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
+    <ItemGroup>
+            <None Update="var\user.information.json">
+                <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            </None>
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Avalonia" Version="11.3.12"/>
@@ -22,5 +27,6 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.5" />
     </ItemGroup>
 </Project>

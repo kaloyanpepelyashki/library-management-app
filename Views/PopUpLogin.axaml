@@ -1,0 +1,25 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:LibraryManagementApp.ViewModels"
+        xmlns:views="using:LibraryManagementApp.Views"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="250"
+        x:Class="LibraryManagementApp.Views.PopUpLogin"
+        x:DataType="vm:PopUpLoginViewModel"
+        Width="400"
+        Height="350"
+        CanResize="False"
+        CanMinimize="False"
+        CanMaximize="False"
+        Title="PopUpLogin">
+        
+        <StackPanel>
+            <StackPanel IsVisible="{Binding IsSignIn}" >
+                <views:PopUpSignInContent />
+            </StackPanel>
+            <StackPanel IsVisible="{Binding IsSignUp}">
+               <views:PopUpSignUpContent />
+            </StackPanel>
+        </StackPanel>
+</Window>

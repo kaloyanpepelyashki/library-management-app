@@ -1,3 +1,4 @@
+using System;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
@@ -6,6 +7,7 @@ using System.Linq;
 using Avalonia.Markup.Xaml;
 using LibraryManagementApp.ViewModels;
 using LibraryManagementApp.Views;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace LibraryManagementApp;
 
@@ -15,9 +17,16 @@ public partial class App : Application
     {
         AvaloniaXamlLoader.Load(this);
     }
-
+    public static IServiceProvider Services { get; private set; } = null!;
     public override void OnFrameworkInitializationCompleted()
     {
+        var collection = new ServiceCollection();
+        collection.AddCommonServices();
+        
+        Services = collection.BuildServiceProvider();
+        
+        var vm = Services.GetRequiredService<MainWindowViewModel>();
+        
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             // Avoid duplicate validations from both Avalonia and the CommunityToolkit. 
@@ -25,10 +34,9 @@ public partial class App : Application
             DisableAvaloniaDataAnnotationValidation();
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel(),
+                DataContext = vm
             };
-        }
-
+        } 
         base.OnFrameworkInitializationCompleted();
     }
 

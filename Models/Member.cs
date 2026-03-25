@@ -4,7 +4,11 @@ namespace LibraryManagementApp.Models;
 
 public class Member : GeneralUser
 {
-    public Member(int id, string name, string role) : base(id, name, role) {}
+    public Member(int id, string name, string role) : base(id, name, role)
+    {
+        BorrowLimit = 5;
+    }
+    
     
     public List<int> CurrentlyBorrowedBooks { get; set; }
     /// <summary>
