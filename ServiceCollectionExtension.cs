@@ -12,6 +12,7 @@ public static class ServiceCollectionExtension
     public static void AddCommonServices(this IServiceCollection services)
     {
         services.AddSingleton<IAuthenticationService, AuthenticationService>();
+        services.AddSingleton<ICatalogueService , CatalogueService>();
         services.AddTransient<MainWindowViewModel>();
         services.AddTransient<PopUpLoginViewModel>();
         services.AddSingleton<ILoanTrackingService, LoanTrackingService>();
