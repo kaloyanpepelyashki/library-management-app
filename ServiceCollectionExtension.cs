@@ -1,5 +1,7 @@
-﻿using LibraryManagementApp.ApplicationLogic;
+﻿using System.Collections.Generic;
+using LibraryManagementApp.ApplicationLogic;
 using LibraryManagementApp.ApplicationLogic.Interfaces;
+using LibraryManagementApp.Models;
 using LibraryManagementApp.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,5 +14,6 @@ public static class ServiceCollectionExtension
         services.AddSingleton<IAuthenticationService, AuthenticationService>();
         services.AddTransient<MainWindowViewModel>();
         services.AddTransient<PopUpLoginViewModel>();
+        services.AddSingleton<ILoanTrackingService, LoanTrackingService>();
     }
 }
