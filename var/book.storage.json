@@ -1,0 +1,234 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Forest",
+    "description": "A mystery unfolds in a secluded forest filled with secrets.",
+    "author": "Emma Carter",
+    "isbn": "978-1-4028-9462-6",
+    "isborrowed": false
+  },
+  {
+    "id": 2,
+    "title": "Shadows of Tomorrow",
+    "description": "A sci-fi tale about time travel and its consequences.",
+    "author": "Liam Turner",
+    "isbn": "978-1-86197-876-9",
+    "isborrowed": true
+  },
+  {
+    "id": 3,
+    "title": "Echoes of the Past",
+    "description": "A historian uncovers secrets that change everything.",
+    "author": "Sophia Bennett",
+    "isbn": "978-0-7432-7356-5",
+    "isborrowed": false
+  },
+  {
+    "id": 4,
+    "title": "Crimson Skies",
+    "description": "A thrilling adventure in a war-torn world.",
+    "author": "Noah Hughes",
+    "isbn": "978-0-452-28423-4",
+    "isborrowed": true
+  },
+  {
+    "id": 5,
+    "title": "The Last Kingdom",
+    "description": "A fallen empire fights to reclaim its glory.",
+    "author": "Olivia Price",
+    "isbn": "978-1-250-30345-6",
+    "isborrowed": false
+  },
+  {
+    "id": 6,
+    "title": "Fragments of Light",
+    "description": "A poetic journey through loss and healing.",
+    "author": "Ethan Cole",
+    "isbn": "978-0-14-312854-0",
+    "isborrowed": false
+  },
+  {
+    "id": 7,
+    "title": "Hidden Truths",
+    "description": "A detective uncovers a conspiracy.",
+    "author": "Ava Richardson",
+    "isbn": "978-1-5011-8756-3",
+    "isborrowed": true
+  },
+  {
+    "id": 8,
+    "title": "The Iron Gate",
+    "description": "A fantasy world divided by an impenetrable barrier.",
+    "author": "James Walker",
+    "isbn": "978-0-316-76948-0",
+    "isborrowed": false
+  },
+  {
+    "id": 9,
+    "title": "Ocean of Stars",
+    "description": "Explorers venture into deep space.",
+    "author": "Mia Thompson",
+    "isbn": "978-1-4767-4658-6",
+    "isborrowed": true
+  },
+  {
+    "id": 10,
+    "title": "The Broken Path",
+    "description": "A journey of redemption and self-discovery.",
+    "author": "Lucas Adams",
+    "isbn": "978-0-553-57340-4",
+    "isborrowed": false
+  },
+  {
+    "id": 11,
+    "title": "Whispers in the Dark",
+    "description": "A horror story set in an abandoned mansion.",
+    "author": "Isabella Green",
+    "isbn": "978-0-06-231500-7",
+    "isborrowed": false
+  },
+  {
+    "id": 12,
+    "title": "Golden Horizon",
+    "description": "A tale of ambition and sacrifice.",
+    "author": "Benjamin Scott",
+    "isbn": "978-1-9848-2132-9",
+    "isborrowed": true
+  },
+  {
+    "id": 13,
+    "title": "Frozen Echo",
+    "description": "A survival story in a frozen wasteland.",
+    "author": "Charlotte Baker",
+    "isbn": "978-0-525-47546-7",
+    "isborrowed": false
+  },
+  {
+    "id": 14,
+    "title": "The Hidden City",
+    "description": "An explorer finds a lost civilization.",
+    "author": "Henry Nelson",
+    "isbn": "978-0-385-50420-1",
+    "isborrowed": true
+  },
+  {
+    "id": 15,
+    "title": "Midnight Flames",
+    "description": "A romance set against chaos and danger.",
+    "author": "Amelia Perez",
+    "isbn": "978-1-250-78454-5",
+    "isborrowed": false
+  },
+  {
+    "id": 16,
+    "title": "The Glass Tower",
+    "description": "Corporate intrigue at its finest.",
+    "author": "Daniel Rivera",
+    "isbn": "978-0-670-03285-3",
+    "isborrowed": true
+  },
+  {
+    "id": 17,
+    "title": "Stormbreak",
+    "description": "A coming-of-age story during a revolution.",
+    "author": "Harper Collins",
+    "isbn": "978-0-14-242417-9",
+    "isborrowed": false
+  },
+  {
+    "id": 18,
+    "title": "The Last Voyage",
+    "description": "A crew faces the unknown at sea.",
+    "author": "Jack Morgan",
+    "isbn": "978-1-4165-9184-3",
+    "isborrowed": false
+  },
+  {
+    "id": 19,
+    "title": "City of Ashes",
+    "description": "A dystopian city struggles to survive.",
+    "author": "Emily Ward",
+    "isbn": "978-1-4169-7034-0",
+    "isborrowed": true
+  },
+  {
+    "id": 20,
+    "title": "The Forgotten Key",
+    "description": "A key unlocks a dangerous secret.",
+    "author": "Matthew Brooks",
+    "isbn": "978-0-7432-7357-2",
+    "isborrowed": false
+  },
+  {
+    "id": 21,
+    "title": "Velvet Night",
+    "description": "A noir mystery set in a dark city.",
+    "author": "Scarlett Hayes",
+    "isbn": "978-0-06-112008-4",
+    "isborrowed": true
+  },
+  {
+    "id": 22,
+    "title": "The Silver Arrow",
+    "description": "A magical artifact holds immense power.",
+    "author": "David Foster",
+    "isbn": "978-0-7432-7358-9",
+    "isborrowed": false
+  },
+  {
+    "id": 23,
+    "title": "Burning Sands",
+    "description": "A journey through a deadly desert.",
+    "author": "Ella Simmons",
+    "isbn": "978-0-307-74165-3",
+    "isborrowed": false
+  },
+  {
+    "id": 24,
+    "title": "The Final Code",
+    "description": "A hacker must stop a global threat.",
+    "author": "Logan Reed",
+    "isbn": "978-1-250-30456-9",
+    "isborrowed": true
+  },
+  {
+    "id": 25,
+    "title": "Moonlit Path",
+    "description": "A mystical journey under the moon.",
+    "author": "Grace Kelly",
+    "isbn": "978-0-141-03435-8",
+    "isborrowed": false
+  },
+  {
+    "id": 26,
+    "title": "The Dark Archive",
+    "description": "Ancient knowledge threatens the present.",
+    "author": "Samuel Cooper",
+    "isbn": "978-0-525-47600-6",
+    "isborrowed": true
+  },
+  {
+    "id": 27,
+    "title": "Broken Crown",
+    "description": "A kingdom falls into chaos.",
+    "author": "Victoria Long",
+    "isbn": "978-1-5011-8757-0",
+    "isborrowed": false
+  },
+  {
+    "id": 28,
+    "title": "The Crystal Sea",
+    "description": "A fantasy world beneath the waves.",
+    "author": "Nathan Gray",
+    "isbn": "978-0-06-256099-5",
+    "isborrowed": false
+  },
+  {
+    "id": 29,
+    "title": "Fading Memories",
+    "description": "A story about memory and identity.",
+    "author": "Lily Evans",
+    "isbn": "978-0-452-28424-1",
+    "isborrowed": true
+  }
+]

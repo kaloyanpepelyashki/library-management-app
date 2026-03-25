@@ -14,6 +14,9 @@
             <None Update="var\user.information.json">
                 <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             </None>
+        <None Update="var\books.storage.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>

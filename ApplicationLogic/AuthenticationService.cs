@@ -8,11 +8,9 @@ namespace LibraryManagementApp.ApplicationLogic;
 
 public class AuthenticationService: IAuthenticationService
 {
-    private string _authenticationFilePath;
 
     public AuthenticationService()
     {
-        _authenticationFilePath = "user.information.json";
     }
 
     public bool Login(string username, string password)
