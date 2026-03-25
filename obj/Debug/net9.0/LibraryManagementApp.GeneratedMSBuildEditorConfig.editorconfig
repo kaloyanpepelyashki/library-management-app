@@ -26,6 +26,12 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/kaloy/Desktop/projects/university/AOP/bonus-point-assignment/library-managment-app/LibraryManagementApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/kaloy/Desktop/projects/university/AOP/bonus-point-assignment/library-managment-app/LibraryManagementApp/Views/BookCatalogue.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/kaloy/Desktop/projects/university/AOP/bonus-point-assignment/library-managment-app/LibraryManagementApp/Views/LibrarianButtons.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/kaloy/Desktop/projects/university/AOP/bonus-point-assignment/library-managment-app/LibraryManagementApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

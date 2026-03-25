@@ -8,22 +8,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d8f5c3c-c259-4795-be61-24627c9ac6c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ApplicationLogic/CatalogueService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApplicationLogic/CatalogueServiceHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApplicationLogic/Interfaces/ICatalogueService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Models/BookPersistence.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/book.storage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryManagementApp/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryManagementApp/.idea/encodings.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/BookCatalogue.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/BookCatalogue.axaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/LibrarianButtons.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/LibrarianButtons.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryManagementApp/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryManagementApp/.idea/avalonia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryManagementApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryManagementApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApplicationLogic/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationLogic/AuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryManagementApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryManagementApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceCollectionExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicationLogic/Session.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationLogic/Session.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViewModels/MainWindowViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/MainWindow.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/LibraryManagementApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/LibraryManagementApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/LibraryManagementApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/LibraryManagementApp.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/LibraryManagementApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/LibraryManagementApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/var/user.information.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/var/user.information.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/Avalonia/Resources.Inputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/Avalonia/Resources.Inputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/Avalonia/resources" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/Avalonia/resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/LibraryManagementApp.pdb" afterDir="false" />
@@ -33,6 +36,7 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/refint/LibraryManagementApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/refint/LibraryManagementApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/user.information.json" beforeDir="false" afterPath="$PROJECT_DIR$/var/user.information.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,20 +167,38 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/f475f8a6717b4647b932f551d13a856d35800/33/83edc894/02000008pdb11.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/f475f8a6717b4647b932f551d13a856d35800/e0/4fcb9954/02000009pdb12.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/f475f8a6717b4647b932f551d13a856d35800/fb/eafe1155/02000008pdb9.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/21e61e58c4b71ebe60d6745f4b7d293b46afd76a659f2cbbedec2c15b4e36/ListBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5bb0cdbeb674fb46ec5ae205c78c1c5d011f7c571e0d02932a735cb16d7e522/SelectingItemsControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ApplicationLogic/CatalogueService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ApplicationLogic/CatalogueServiceHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ApplicationLogic/Interfaces/ICatalogueService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Models/BookPersistence.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/BookCatalogue.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/BookCatalogue.axaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/LibrarianButtons.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/LibrarianButtons.axaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/var/book.storage.json" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3BSITz7iqsDvfd5z3F5JVJ984t4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.LibraryManagementApp.executor": "Debug",
-    "git-widget-placeholder": "kaloyan/feature/library-catalogue-logic",
+    ".NET Project.LibraryManagementApp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -210,9 +232,23 @@
     </recent_temporary>
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d8f5c3c-c259-4795-be61-24627c9ac6c4" name="Changes" comment="" />
+      <created>1774476057749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774476057749</updated>
+      <workItem from="1774476058979" duration="5743000" />
+    </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -333,6 +369,18 @@
           </properties>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="39" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="40" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="41" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

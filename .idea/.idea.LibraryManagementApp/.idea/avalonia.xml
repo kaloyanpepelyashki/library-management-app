@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Views/BookCatalogue.axaml" value="LibraryManagementApp.csproj" />
         <entry key="Views/MainWindow.axaml" value="LibraryManagementApp.csproj" />
         <entry key="Views/PopUpLogin.axaml" value="LibraryManagementApp.csproj" />
         <entry key="Views/PopUpSignInContent.axaml" value="LibraryManagementApp.csproj" />

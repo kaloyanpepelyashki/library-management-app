@@ -1,0 +1,27 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:LibraryManagementApp.ViewModels"
+             xmlns:views="clr-namespace:LibraryManagementApp.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:MainWindowViewModel"
+             x:Class="LibraryManagementApp.Views.BookCatalogue">
+            
+    <StackPanel Margin="80">
+        <TextBlock FontSize="25" Text="Available Books" />
+
+        <ListBox ItemsSource="{Binding Books}" Focusable="False">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <TextBlock Text="{Binding Title}" />
+                        <TextBlock Text="{Binding Description}" />
+                        <TextBlock Text="{Binding Author}" />
+                        <views:LibrarianButtons DataContext="{Binding $parent[UserControl].DataContext}"  />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</UserControl>

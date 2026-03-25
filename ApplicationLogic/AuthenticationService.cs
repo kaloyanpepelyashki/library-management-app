@@ -25,7 +25,8 @@ public class AuthenticationService: IAuthenticationService
                 loginValidity.Item2.Role);
 
             Session.SetCurrentUser(currentUser);
-
+            Session.SetAuthenticationCompleted();
+            
             return true;
         }
         catch (ParsedDataEmptyException e)
