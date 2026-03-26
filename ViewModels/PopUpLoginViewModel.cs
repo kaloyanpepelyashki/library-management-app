@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using LibraryManagementApp.ApplicationLogic;
 using LibraryManagementApp.ApplicationLogic.Interfaces;
+using LibraryManagementApp.Views;
 
 namespace LibraryManagementApp.ViewModels;
 
@@ -106,6 +107,9 @@ public partial class PopUpLoginViewModel :  ViewModelBase
                 role = "Librarian";
             }
             _authenticationService.SignUp(Username, Password, role);
+        
+            // Auto-login after sign-up
+            _authenticationService.Login(Username, Password);
         }
         catch (Exception ex)
         {

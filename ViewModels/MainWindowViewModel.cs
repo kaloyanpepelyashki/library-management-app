@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using LibraryManagementApp.ApplicationLogic;
 using LibraryManagementApp.ApplicationLogic.Interfaces;
 using LibraryManagementApp.Models;
+using LibraryManagementApp.ViewModels;
 using LibraryManagementApp.Views;
-
-namespace LibraryManagementApp.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
@@ -16,15 +13,21 @@ public partial class MainWindowViewModel : ViewModelBase
     private bool _hasUserAutenticated;
     private bool _isUserLibrarian = false;
     private IAuthenticationService _authenticationService;
+    private LibrarianManagementViewModel _librarianViewModel;
 
     public ICommand LogoutCommand { get; }
     
     private ObservableCollection<Book> _books;
 
+    public LibrarianManagementViewModel LibrarianViewModel
+    {
+        get { return _librarianViewModel; }
+        set { SetProperty(ref _librarianViewModel, value); }
+    }
+
     public ObservableCollection<Book> Books
     {
         get { return _books; }
-        
     }
 
     public bool HasUserAutenticated
@@ -39,12 +42,12 @@ public partial class MainWindowViewModel : ViewModelBase
         set => SetProperty(ref _isUserLibrarian, value);
     }
 
-    public MainWindowViewModel(ICatalogueService catalogueService, IAuthenticationService authenticationService)
+    public MainWindowViewModel(ICatalogueService catalogueService, IAuthenticationService authenticationService, LibrarianManagementViewModel librarianViewModel)
     {
         _authenticationService = authenticationService;
+        _librarianViewModel = librarianViewModel;
         _hasUserAutenticated = Session.GetAuthenticationCompleted();
         CheckIfUserLibrarian();
-        //Tracks an event of session property change
         Session.AuthenticationChanged += OnAuthenticationChanged;
         Session.CurrentUserUpdate += CheckIfUserLibrarian;
         _catalogueService = catalogueService;
@@ -56,29 +59,24 @@ public partial class MainWindowViewModel : ViewModelBase
     {
         if (Session.GetCurrentUserRole() == null)
         {
-            _isUserLibrarian = false;
+            IsUserLibrarian = false;
             return;
         }
         
-        if (Session.GetCurrentUserRole() == Role.Librarian)
-        {
-            _isUserLibrarian = true;
-            Console.WriteLine("Librarian");
-            return;
-        }
-        Console.WriteLine("Not Librarian");
-        _isUserLibrarian = false;
+        IsUserLibrarian = Session.GetCurrentUserRole() == Role.Librarian;
     }
     
     private void OnAuthenticationChanged()
     {
         HasUserAutenticated = Session.GetAuthenticationCompleted();
     }
+
     private void OnLogout()
     {
         _authenticationService.Logout();
         ShowLoginPopup();
     }
+
     private async void ShowLoginPopup()
     {
         var popup = new PopUpLogin();

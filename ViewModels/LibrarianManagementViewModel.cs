@@ -17,6 +17,7 @@ public class LibrarianManagementViewModel : ViewModelBase
     public ObservableCollection<Member> MembersWithBorrowedBooks
     {
         get { return _membersWithBorrowedBooks; }
+        set { SetProperty(ref _membersWithBorrowedBooks, value); }
     }
 
     public string SelectedUserId
@@ -55,10 +56,10 @@ public class LibrarianManagementViewModel : ViewModelBase
         try
         {
             var members = _loanTrackingService.GetAllMembersWithBorrowedBooks();
-            _membersWithBorrowedBooks.Clear();
+            MembersWithBorrowedBooks.Clear();
             foreach (var member in members)
             {
-                _membersWithBorrowedBooks.Add(member);
+                MembersWithBorrowedBooks.Add(member);
             }
             Console.WriteLine("Members loaded successfully");
         }
