@@ -10,18 +10,20 @@
             
     <StackPanel Margin="80">
         <TextBlock FontSize="25" Text="Available Books" />
-
-        <ListBox ItemsSource="{Binding Books}" Focusable="False">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Spacing="12">
-                        <TextBlock Text="{Binding Title}" />
-                        <TextBlock Text="{Binding Description}" />
-                        <TextBlock Text="{Binding Author}" />
-                        <views:LibrarianButtons DataContext="{Binding $parent[UserControl].DataContext}"  />
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <ScrollViewer Height="500">
+            <ListBox ItemsSource="{Binding Books}" Focusable="False">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <TextBlock Text="{Binding Title}" />
+                            <TextBlock Text="{Binding Description}" />
+                            <TextBlock Text="{Binding Author}" />
+                            <views:LibrarianButtons DataContext="{Binding $parent[UserControl].DataContext}"  />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+        <Button Command="{Binding LogoutCommand}" Content="Logout" />
     </StackPanel>
 </UserControl>

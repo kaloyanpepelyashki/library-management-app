@@ -31,4 +31,10 @@ public static class Session
     {
         return AuthenticationCompleted;
     }
+    
+    public static void ResetAuthenticationCompleted()
+    {
+        AuthenticationCompleted = false;
+        AuthenticationChanged?.Invoke();
+    }
 }

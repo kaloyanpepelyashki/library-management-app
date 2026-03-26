@@ -65,4 +65,9 @@ public class AuthenticationService: IAuthenticationService
             throw;
         }
     }
+    public void Logout()
+    {
+        Session.SetCurrentUser(null);
+        Session.ResetAuthenticationCompleted();
+    }
 }
