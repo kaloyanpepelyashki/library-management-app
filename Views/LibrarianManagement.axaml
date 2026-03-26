@@ -1,0 +1,54 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:LibraryManagementApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             x:DataType="vm:LibrarianManagementViewModel"
+             x:Class="LibraryManagementApp.Views.LibrarianManagement">
+
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock FontSize="24" FontWeight="Bold" Text="Librarian Management" />
+
+        <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="10">
+            <StackPanel Spacing="10">
+                <TextBlock Text="View Borrowed Books" FontWeight="Bold" />
+                <Button Command="{Binding GetMembersCommand}" Content="Load Members with Borrowed Books" Padding="10" />
+                <ListBox ItemsSource="{Binding MembersWithBorrowedBooks}" Height="200">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </Border>
+
+        <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="10">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Check User Book Status" FontWeight="Bold" />
+                <StackPanel Spacing="5">
+                    <TextBlock Text="User ID:" />
+                    <TextBox Text="{Binding SelectedUserId, UpdateSourceTrigger=PropertyChanged}" Padding="5" />
+                </StackPanel>
+                <StackPanel Spacing="5">
+                    <TextBlock Text="Book ID:" />
+                    <TextBox Text="{Binding SelectedBookId, UpdateSourceTrigger=PropertyChanged}" Padding="5" />
+                </StackPanel>
+                <Button Command="{Binding CheckUserBorrowedBookCommand}" Content="Check if User Borrowed Book" Padding="10" />
+                <TextBlock Text="{Binding UserHasBorrowedBook, StringFormat='Book Borrowed: {0}'}" FontWeight="Bold" />
+            </StackPanel>
+        </Border>
+
+        <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="10">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Get Borrowed Books Count" FontWeight="Bold" />
+                <StackPanel Spacing="5">
+                    <TextBlock Text="User ID:" />
+                    <TextBox Text="{Binding SelectedUserId, UpdateSourceTrigger=PropertyChanged}" Padding="5" />
+                </StackPanel>
+                <Button Command="{Binding GetUserBorrowedBooksCountCommand}" Content="Get Borrowed Count" Padding="10" />
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</UserControl>

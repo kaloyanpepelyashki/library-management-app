@@ -16,5 +16,6 @@ public static class ServiceCollectionExtension
         services.AddTransient<MainWindowViewModel>();
         services.AddTransient<PopUpLoginViewModel>();
         services.AddSingleton<ILoanTrackingService, LoanTrackingService>();
+        services.AddTransient<LibrarianManagementViewModel>();
     }
 }
